@@ -38,7 +38,9 @@ public class ThreadBreaker implements Runnable {
                 ThreadSafeSingleton.getInstance();
         System.out.println(
                 this.getThreadName() +
-                        "has lazy singleton isntance " + instance.hashCode());
+                        "has lazy singleton isntance " + instance.hashCode() +
+                        "and threadsafe singleton instance" + ts_instance.hashCode()
+        );
     }
 
     private String getThreadName() {
