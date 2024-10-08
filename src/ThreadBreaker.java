@@ -1,6 +1,7 @@
 import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.List;
+import java.lang.Runnable;
 
 public class ThreadBreaker implements Runnable {
 
@@ -38,8 +39,8 @@ public class ThreadBreaker implements Runnable {
                 ThreadSafeSingleton.getInstance();
         System.out.println(
                 this.getThreadName() +
-                        "has lazy singleton isntance " + instance.hashCode() +
-                        "and threadsafe singleton instance" + ts_instance.hashCode()
+                        " has lazy singleton isntance " + instance.hashCode() +
+                        " and threadsafe singleton instance " + ts_instance.hashCode()
         );
     }
 
